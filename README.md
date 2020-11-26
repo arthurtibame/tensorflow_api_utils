@@ -1,6 +1,6 @@
 # Tensorflow Object detection api usage
 
-
+## Clone this repo.
 ```cmd
 git clone https://github.com/arthurtibame/tensorflow_api_utils.git
 ```
@@ -9,6 +9,7 @@ git clone https://github.com/arthurtibame/tensorflow_api_utils.git
 cd tensorflow_api_utils
 ```
 ---
+## Clone tensorflow official repo
 
 ```cmd
 git clone https://github.com/tensorflow/models.git
@@ -33,6 +34,7 @@ sudo apt-get update && sudo apt-get install -y \
     wget
 ```
 ## Generate Protobuf converter
+- The following command will generate .py in ./models/research/object_detection/proto
 ```cmd
 cd models/research
 protoc object_detection/protos/*.proto --python_out=.
@@ -84,7 +86,7 @@ python object_detection/export_tflite_graph_tf2.py \
 	--output_directory=$OUTPUT_DIRECTORY
 ```
 
-## Convert .pb to .tflite (FP32) [PLEASE USER tf-nighlt-gpu version of tensorflow]
+## Convert .pb to .tflite (FP32) [PLEASE USE tf-nighlt-gpu version of tensorflow]
 ```cmd
 tflite_convert --saved_model_dir=$OUTPUT_DIRECTORY/saved_model --output_file=$OUTPUT_DIRECTORY/detect.tflite
 ```
