@@ -37,13 +37,13 @@ sudo apt-get update && sudo apt-get install -y \
 cd models/research
 protoc object_detection/protos/*.proto --python_out=.
 ```
-## install python packages
+## Install python packages
 ```
 cp object_detection/packages/tf2/setup.py .
 python -m pip install .
 ```
 
-## data preparation
+## Data preparation
 - For the flag, model, please check the available models in [here](https://github.com/tensorflow/models/blob/master/research/object_detection/g3doc/tf2_detection_zoo.md)
 
 - If there are some modified please add new links in [here](https://github.com/arthurtibame/tensorflow_api_utils/blob/main/utils/models.json)
